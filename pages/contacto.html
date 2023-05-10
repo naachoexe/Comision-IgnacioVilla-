@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TecnoTech . Nosotros</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="marcoseparador">
+      <h1 class="aparecer modif">TecnoTech</h1>
+
+      <nav class="navbar barrapad">
+        <div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link rounded modif" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded modif" href="./productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded modif" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded modif" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded modif" href="./ayuda.html">Ayuda</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    </header>
+
+
+    <main>
+      <section id="formatocontacto">
+        <form id="contact-form">
+          <div class="formato">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <p class="ayuda">Si necesitas ayuda o tienes alguna pregunta, no dudes en contactarnos aquí. Estamos más que felices de ayudarte de cualquier manera que podamos.</p>
+            <input type="submit" value="Enviar" id="submit-button">
+          </div>
+        </form>
+      </section>
+    </main>
+    <div id="dialog" class="hidden">
+      <div class="dialog-contenido">
+        <div class="mensaje">¡Muchas gracias!, Tu Consulta fue Derivada al Staff,</div>
+        <div class="mensaje">Ten Paciencia, Dentro de las 24 horas tu consulta sera atendida!.</div>
+        <button id="close-button">Cerrar</button>
+      </div>
+    </div>
+    
+  <script> 
+      const submitButton = document.getElementById('submit-button');
+      const dialog = document.getElementById('dialog');
+      const closeButton = document.getElementById('close-button');
+      const formatocontacto = document.getElementById('formatocontacto');
+
+      submitButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        dialog.classList.remove('hidden');
+        dialog.style.transform = "scale(1)";
+        formatocontacto.classList.add('hidden')
+      });
+
+      closeButton.addEventListener('click', function() {
+        dialog.style.transform = "scale(0)";
+        formatocontacto.classList.remove('hidden')
+        setTimeout( () => dialog.classList.add('hidden'), 300);
+      });
+  </script>
+
+    <footer>
+      <p>&copy; TecnoTech, Todos los Derechos Reservados.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
