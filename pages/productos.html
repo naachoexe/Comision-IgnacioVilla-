@@ -1,130 +1,159 @@
-<!DOCTYPE html> 
-<html>  
-<head>   
-    <meta charset="UTF-8">   
-    <title>TecnoTech . Productos</title>   
-    <link rel="stylesheet" href="../css/style.css">   
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TecnoTech . Productos</title>
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>  
-<body>   
-    <header class="marcoseparador">     
-        <h1 class="aparecer modif">TecnoTech</h1>      
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-        
-        <nav class="navbar barrapad">       
-            <div>         
+</head>
+
+<body>
+    <header class="marcoseparador">
+        <h1 class="aparecer modif">TecnoTech</h1>
+
+
+        <nav class="navbar barrapad">
+            <div>
                 <ul class="navbar-nav pages">
-                    <li class="nav-item active">        
-                        <a class="nav-link rounded modif pages" href="../index.html">Inicio</a>           
-                    </li>           
-                    <li class="nav-item">             
-                        <a class="nav-link rounded modif pages" href="./productos.html">Productos</a>           
-                    </li>           
-                    <li class="nav-item">             
-                        <a class="nav-link rounded modif pages" href="./nosotros.html">Nosotros</a>           
-                    </li>           
-                    <li class="nav-item">             
-                        <a class="nav-link rounded modif pages" href="./contacto.html">Contacto</a>           
-                    </li>           
-                    <li class="nav-item">             
-                        <a class="nav-link rounded modif pages" href="./ayuda.html">Ayuda</a>           
-                    </li>         
-                </ul>       
-            </div>     
-        </nav>   
-    </header>   
-    <main>     
-        <section>       
-            <h2 class="espacio">Placas de Video</h2>       
-            <div class="productos">         
-                <div class="producto" data-id="1" id="producto_1">           
-                    <img src="../img/1050ti.png" alt="GTX 1050 Ti">           
-                    <div class="titulo">GTX 1050 Ti</div>           
-                    <div class="precio">130.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="2" id="producto_2">           
-                    <img src="../img/1660super.png" alt="GTX 1660 Super">           
-                    <div class="titulo">GTX 1660 Super</div>           
-                    <div class="precio">190.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="3" id="producto_3">           
-                    <img src="../img/3070.png" alt="RTX 3070">           
-                    <div class="titulo">RTX 3070</div>           
-                    <div class="precio">260.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="4" id="producto_4">           
-                    <img src="../img/5500xt.png" alt="Radeon RX 5500 XT">           
-                    <div class="titulo">Radeon RX 5500 XT</div>           
-                    <div class="precio">220.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="5" id="producto_5">           
-                    <img src="../img/5700xt.png" alt="Radeon RX 5700 XT">           
-                    <div class="titulo">Radeon RX 5700 XT</div>           
-                    <div class="precio">250.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="6" id="producto_6">           
-                    <img src="../img/rx570.png" alt="Radeon RX 570">           
-                    <div class="titulo">Radeon RX 570</div>           
-                    <div class="precio">150.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="7" id="producto_7">           
-                    <img src="../img/coolercpu.png" alt="Cooler">           
-                    <div class="titulo">DC-Cooler CPU 2v</div>           
-                    <div class="precio">15.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="8" id="producto_8">           
-                    <img src="../img/adaptadorplaca.png" alt="Cable Adaptador">           
-                    <div class="titulo">PCI EXPRESS</div>           
-                    <div class="precio">1.200 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>         
-                <div class="producto" data-id="9" id="producto_9">           
-                    <img src="../img/soporteplaca.png" alt="Soporte">           
-                    <div class="titulo">Soporte para Placas de Video</div>           
-                    <div class="precio">6.000 ARS</div>           
-                    <div class="comprarr">Comprar</div>         
-                </div>       
-            </div>     
-        </section>       
-        <div class="modal fade" id="producto-modal" tabindex="-1" role="dialog" hidden="true">       
-            <div class="modal-dialog modal-lg" role="document">         
-                <div class="modal-content">           
-                    <div class="modal-header">             
-                        <h5 class="modal-title" id="producto-modal-titulo"></h5>             
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">               
-                            <span aria-hidden="true">&times;</span>             
-                        </button>           
-                    </div>           
-                    <div class="modal-body">             
-                        <img src="" id="producto-modal-img" alt="">           
-                    </div>         
-                </div>       
-            </div>     
-        </div>      
+                    <li class="nav-item active">
+                        <a class="nav-link rounded modif pages" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded modif pages" href="./productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded modif pages" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded modif pages" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded modif pages" href="./ayuda.html">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="espacio">Placas de Video</h2>
+            <div class="productos">
+                <div class="producto" data-id="1" id="producto_1">
+                    <img src="../img/1050ti.png" alt="GTX 1050 Ti">
+                    <div class="titulo">GTX 1050 Ti</div>
+                    <div class="precio">130.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="2" id="producto_2">
+                    <img src="../img/1660super.png" alt="GTX 1660 Super">
+                    <div class="titulo">GTX 1660 Super</div>
+                    <div class="precio">190.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="3" id="producto_3">
+                    <img src="../img/3070.png" alt="RTX 3070">
+                    <div class="titulo">RTX 3070</div>
+                    <div class="precio">260.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="4" id="producto_4">
+                    <img src="../img/5500xt.png" alt="Radeon RX 5500 XT">
+                    <div class="titulo">Radeon RX 5500 XT</div>
+                    <div class="precio">220.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="5" id="producto_5">
+                    <img src="../img/5700xt.png" alt="Radeon RX 5700 XT">
+                    <div class="titulo">Radeon RX 5700 XT</div>
+                    <div class="precio">250.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="6" id="producto_6">
+                    <img src="../img/rx570.png" alt="Radeon RX 570">
+                    <div class="titulo">Radeon RX 570</div>
+                    <div class="precio">150.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="7" id="producto_7">
+                    <img src="../img/coolercpu.png" alt="Cooler">
+                    <div class="titulo">DC-Cooler CPU 2v</div>
+                    <div class="precio">15.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="8" id="producto_8">
+                    <img src="../img/adaptadorplaca.png" alt="Cable Adaptador">
+                    <div class="titulo">PCI EXPRESS</div>
+                    <div class="precio">1.200 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+                <div class="producto" data-id="9" id="producto_9">
+                    <img src="../img/soporteplaca.png" alt="Soporte">
+                    <div class="titulo">Soporte para Placas de Video</div>
+                    <div class="precio">6.000 ARS</div>
+                    <div class="comprarr">Comprar</div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade" id="producto-modal" tabindex="-1" role="dialog" hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="producto-modal-titulo"></h5>
+                        <button type="button" class="close btn-tooltip" data-dismiss="modal" aria-label="Close"
+                            title="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" id="producto-modal-img" alt="">
+                    </div>
+                    <button class="boton-comprar">
+                        Comprar
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
         <script>
-          $(".comprarr").click(function() {
-              var target = $(this).data('target');
-              var producto = $(this).parent();
-              var img_src = producto.find("img").attr("src");
-              var titulo = producto.find(".titulo").text();
-              var id_producto = producto.attr("data-id");
-              $("#producto-modal-img").attr("src", img_src);
-              $("#producto-modal-titulo").text(titulo);
-              $("#producto-modal").modal();
-              $('html, body').animate({ scrollTop: $("#producto-modal").offset().top }, 1000);
-          });
-      </script>  
-    </main>   
-    <footer>     
-        <p>&copy; TecnoTech, Todos los Derechos Reservados.</p>   
-    </footer>    
-</body>  
-</html>  
+            $(document).ready(function () {
+                $(".comprarr").click(function () {
+                    desactivarPagina();
+
+                    var producto = $(this).parent();
+                    var img_src = producto.find("img").attr("src");
+                    var titulo = producto.find(".titulo").text();
+                    $("#producto-modal-img").attr("src", img_src);
+                    $("#producto-modal-titulo").text(titulo);
+                    $("#producto-modal").modal();
+                    $('html, body').animate({ scrollTop: $("#producto-modal").offset().top }, 1000);
+                });
+
+                $("#producto-modal").on("hidden.bs.modal", function () {
+                    activarPagina();
+                });
+
+                $("#producto-modal .close").click(function () {
+                    activarPagina();
+                });
+
+                function desactivarPagina() {
+                    $("#bloqueo").show();
+                }
+
+                function activarPagina() {
+                    $("#bloqueo").hide();;
+                }
+            });
+        </script>
+        <div id="bloqueo" hidden></div>
+    </main>
+    <footer>
+        <p>&copy; TecnoTech, Todos los Derechos Reservados.</p>
+    </footer>
+</body>
+
+</html>
