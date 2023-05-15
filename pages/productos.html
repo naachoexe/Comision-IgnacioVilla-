@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TecnoTech . Productos</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -114,7 +114,7 @@
                     <button class="boton-comprar">
                         Comprar
                     </button>
-                    
+
                 </div>
             </div>
         </div>
@@ -130,6 +130,12 @@
                     $("#producto-modal-titulo").text(titulo);
                     $("#producto-modal").modal();
                     $('html, body').animate({ scrollTop: $("#producto-modal").offset().top }, 1000);
+                });
+
+                            
+                $(window).scroll(function () {
+                    var scrollPosition = $(window).scrollTop();
+                    $('.modal-dialog').css('top', scrollPosition + 25);
                 });
 
                 $("#producto-modal").on("hidden.bs.modal", function () {

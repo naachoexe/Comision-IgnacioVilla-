@@ -646,6 +646,7 @@
     animation: pulsar 1s infinite;
     background-color: #fb0;
     border-radius: 60%;
+    cursor: pointer;
   }
   
   @keyframes pulsar {
