@@ -6,37 +6,63 @@
     <title>TecnoTech . Productos</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+    <!-- METAS MOTOR DE BUSQUEDA -->
+
+    <meta name="keywords" content="Productos, Tecnología, Hardware, Software, Electrónica">
+    <meta name="description"
+        content="Explora nuestra amplia variedad de productos tecnológicos en Tecnotech. Ofrecemos hardware, software, electrónica, accesorios, celulares, tablets y más. Descubre las últimas novedades en tecnología aquí.">
+
+    <!-- PROTOCOLO OPENGRAPH -->
+
+    <meta property="og:title" content="Productos Tecnológicos en Tecnotech - Tecnología al alcance de tu mano">
+    <meta property="og:description"
+        content="Explora nuestra amplia variedad de productos tecnológicos en Tecnotech. Ofrecemos hardware, software, electrónica, accesorios, celulares, tablets y más. Descubre las últimas novedades en tecnología aquí.">
+    <meta property="og:image" content="https://i.ibb.co/0XXm6pt/1660super.png">
+    <meta property="og:url" content="https://naachoexe.github.io/Comision-IgnacioVillaa/pages/productos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tecnotech">
 
 </head>
 
+
 <body>
     <header class="marcoseparador">
-        <h1 class="aparecer modif">TecnoTech</h1>
+        <a href="../index.html">
+            <h1 class="aparecer">TecnoTech</h1>
+        </a>
 
-
-        <nav class="navbar barrapad">
-            <div>
-                <ul class="navbar-nav pages">
+        <nav class="navbar navbar-expand-lg navbar-light mx-auto" style="background-color: #756e6ebb;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
-                        <a class="nav-link rounded modif pages" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded modif pages" href="./productos.html">Productos</a>
+                        <a class="nav-link" href="./productos.html">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded modif pages" href="./nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded modif pages" href="./contacto.html">Contacto</a>
+                        <a class="nav-link" href="./contacto.html">Contactos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded modif pages" href="./ayuda.html">Ayuda</a>
+                        <a class="nav-link" href="./ayuda.html">Ayuda</a>
                     </li>
                 </ul>
             </div>
         </nav>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     </header>
     <main>
         <section>
@@ -98,8 +124,8 @@
                 </div>
             </div>
         </section>
-        <div class="modal fade" id="producto-modal" tabindex="-1" role="dialog" hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal fade" id="producto-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="producto-modal-titulo"></h5>
@@ -129,13 +155,23 @@
                     $("#producto-modal-img").attr("src", img_src);
                     $("#producto-modal-titulo").text(titulo);
                     $("#producto-modal").modal();
-                    $('html, body').animate({ scrollTop: $("#producto-modal").offset().top }, 1000);
                 });
 
-                            
-                $(window).scroll(function () {
+                $('#producto-modal').on('show.bs.modal', function () {
+                    $('body').addClass('modal-open');
+                    $('.modal-backdrop').appendTo(this);
+
+                    // Ajustar la posición inicial del modal-dialog
                     var scrollPosition = $(window).scrollTop();
-                    $('.modal-dialog').css('top', scrollPosition + 25);
+                    $(this).find('.modal-dialog').css('top', scrollPosition + 25);
+
+                    $(this).css('padding-top', scrollPosition);
+                });
+
+                $('#producto-modal').on('show.bs.modal', function () {
+                    $('body').addClass('modal-open');
+                    $('.modal-backdrop').appendTo(this);
+                    $(this).css('padding-top', $(window).scrollTop());
                 });
 
                 $("#producto-modal").on("hidden.bs.modal", function () {
@@ -156,6 +192,8 @@
             });
         </script>
         <div id="bloqueo" hidden></div>
+
+
     </main>
     <footer>
         <p>&copy; TecnoTech, Todos los Derechos Reservados.</p>

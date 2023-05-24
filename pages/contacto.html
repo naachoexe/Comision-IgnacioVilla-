@@ -1,87 +1,123 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>TecnoTech . Nosotros</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-  </head>
-  <body>
-    <header class="marcoseparador">
-      <h1 class="aparecer modif">TecnoTech</h1>
 
-      <nav class="navbar barrapad">
-        <div>
-          <ul class="navbar-nav pages">
-            <li class="nav-item active">        
-              <a class="nav-link rounded modif pages" href="../index.html">Inicio</a>           
-          </li>           
-          <li class="nav-item">             
-              <a class="nav-link rounded modif pages" href="./productos.html">Productos</a>           
-          </li>           
-          <li class="nav-item">             
-              <a class="nav-link rounded modif pages" href="./nosotros.html">Nosotros</a>           
-          </li>           
-          <li class="nav-item">             
-              <a class="nav-link rounded modif pages" href="./contacto.html">Contacto</a>           
-          </li>           
-          <li class="nav-item">             
-              <a class="nav-link rounded modif pages" href="./ayuda.html">Ayuda</a>           
-          </li>  
-            </ul>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <title>TecnoTech . Contacto</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+  <!-- METAS MOTOR DE BUSQUEDA -->
+
+  <meta name="keywords" content="Contacto, Formulario, Soporte, Correo electrónico, Teléfono">
+  <meta name="description"
+    content="Contáctanos en Tecnotech. Utiliza nuestro formulario en línea, correo electrónico o teléfono para cualquier consulta o solicitud de soporte técnico. Estaremos encantados de ayudarte.">
+
+  <!-- PROTOCOLO OPENGRAPH -->
+
+  <meta property="og:title" content="Contacta con Tecnotech - Formulario en línea, correo electrónico y teléfono">
+  <meta property="og:description"
+    content="Contáctanos en Tecnotech. Utiliza nuestro formulario en línea, correo electrónico o teléfono para cualquier consulta o solicitud de soporte técnico. Estaremos encantados de ayudarte.">
+  <meta property="og:image" content="https://i.ibb.co/0XXm6pt/1660super.png">
+  <meta property="og:url" content="https://naachoexe.github.io/Comision-IgnacioVillaa/pages/contacto.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tecnotech">
+
+</head>
+
+
+<body>
+  <header class="marcoseparador">
+    <a href="../index.html">
+      <h1 class="aparecer">TecnoTech</h1>
+    </a>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light mx-auto" style="background-color: #756e6ebb;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ayuda.html">Ayuda</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  </header>
 
 
-    </header>
-
-
-    <main>
-      <section id="formatocontacto">
-        <form id="contact-form">
-          <div class="formato">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-            <p class="ayuda">Si necesitas ayuda o tienes alguna pregunta, no dudes en contactarnos aquí. Estamos más que felices de ayudarte de cualquier manera que podamos.</p>
-            <input type="submit" value="Enviar" id="submit-button">
-          </div>
-        </form>
-      </section>
-    </main>
-    <div id="dialog" class="hidden">
-      <div class="dialog-contenido">
+  <main>
+    <section id="formatocontacto">
+      <form id="contact-form">
+        <div class="formato">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+          <p class="ayuda">Si necesitas ayuda o tienes alguna pregunta, no dudes en contactarnos aquí. Estamos más que
+            felices de ayudarte de cualquier manera que podamos.</p>
+          <input type="submit" value="Enviar" id="submit-button">
+        </div>
+      </form>
+    </section>
+  </main>
+  <div id="dialog" class="hidden">
+    <div class="dialog-contenido">
+      <div class="alinear">
         <div class="mensaje">¡Muchas gracias!, Tu Consulta fue Derivada al Staff,</div>
         <div class="mensaje">Ten Paciencia, Dentro de las 24 horas tu consulta sera atendida!.</div>
         <button id="close-button">Cerrar</button>
       </div>
     </div>
-    
-  <script> 
-      const submitButton = document.getElementById('submit-button');
-      const dialog = document.getElementById('dialog');
-      const closeButton = document.getElementById('close-button');
-      const formatocontacto = document.getElementById('formatocontacto');
+  </div>
 
-      submitButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        dialog.classList.remove('hidden');
-        dialog.style.transform = "scale(1)";
-        formatocontacto.classList.add('hidden')
-      });
+  <script>
+    const submitButton = document.getElementById('submit-button');
+    const dialog = document.getElementById('dialog');
+    const closeButton = document.getElementById('close-button');
+    const formatocontacto = document.getElementById('formatocontacto');
 
-      closeButton.addEventListener('click', function() {
-        dialog.style.transform = "scale(0)";
-        formatocontacto.classList.remove('hidden')
-        setTimeout( () => dialog.classList.add('hidden'), 300);
-      });
+    submitButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      dialog.classList.remove('hidden');
+      dialog.style.transform = "scale(1)";
+      formatocontacto.classList.add('hidden')
+    });
+
+    closeButton.addEventListener('click', function () {
+      dialog.style.transform = "scale(0)";
+      formatocontacto.classList.remove('hidden')
+      setTimeout(() => dialog.classList.add('hidden'), 300);
+    });
   </script>
 
-    <footer>
-      <p>&copy; TecnoTech, Todos los Derechos Reservados.</p>
-    </footer>
+  <footer>
+    <p>&copy; TecnoTech, Todos los Derechos Reservados.</p>
+  </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
 </html>

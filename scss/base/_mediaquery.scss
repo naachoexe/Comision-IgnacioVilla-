@@ -122,3 +122,42 @@
         }
     }
 }
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background-color: #676b70 !important; // Color oscuro similar a la clase "bg-dark" de Bootstrap
+        border-radius: 25px; // Quitar el borde redondeado del menú de navegación
+        box-shadow: none; // Quitar la sombra en dispositivos móviles
+        padding: .5rem !important; // Espacio alrededor del menú de navegación
+    }
+
+    .navbar-nav {
+        flex-direction: column; // Hacer que los elementos estén en columna en vez de en fila
+    }
+
+    .nav-item {
+        margin-bottom: .5rem; // Espacio entre cada elemento
+    }
+
+    .nav-link {
+        color: #fff !important;
+        font-size: 1.2rem !important;
+        padding: 0px 50% !important;
+        transition: all .3s ease;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: #fff !important;
+            color: #2b2828bb !important;
+            border-radius: 25px;
+        }
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff !important;
+        border-radius: 12px;
+        margin-left: 730% !important;
+
+    }
+
+}
